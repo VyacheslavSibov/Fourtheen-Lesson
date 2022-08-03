@@ -7,21 +7,22 @@ import static ua.ithillel.java.Function.*;
 
 public class Main {
     public static void main(String[] args) {
-        User director = new User("Director", "asd321", "Борис", Director);
-        User admin = new User("Administration", "asa123", "Алена", Administration);
-        User manager = new User("Manager", "fad423", "Ярослав", Manager);
-        User client = new User("Client", "zas123", "Дмитрий", Client);
-        User anonym = new User("Anonym", "he13s", "untitled", Anonym);
+        User director = new User("Director", "asd321", "Борис", DIRECTOR);
+        User admin = new User("Administration", "asa123", "Алена", ADMINISTRATION);
+        User manager = new User("Manager", "fad423", "Ярослав", MANAGER);
+        User client = new User("Client", "zas123", "Дмитрий", CLIENT);
+        User anonym = new User("Anonym", "he13s", "untitled", ANONYM);
 
         User[] users = {director, admin, manager, client, anonym};
 
         Store store = new Store("Silpo", "https://silpoonline.com", users);
 
         while (true) {
-            Login(store);
+            tryLogin(store);
         }
     }
-    public static void Login(Store store) {
+
+    public static void tryLogin(Store store) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите логин:");
         String login = scanner.nextLine();

@@ -6,7 +6,7 @@ public class User {
     private String login;
     private String password;
     private String name;
-    private Function role = Anonym;
+    private Function role = ANONYM;
 
     public User(String login, String password, String name, Function role) {
         this.login = login;

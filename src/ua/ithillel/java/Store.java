@@ -58,19 +58,19 @@ public class Store {
 
     public void getCurrentUserRights(User authorised) {
         switch (authorised.getRole()) {
-            case Director:
+            case DIRECTOR:
                 System.out.println("Директор магазина, может управлять кадрами, и ценами");
                 break;
-            case Administration:
+            case ADMINISTRATION:
                 System.out.println("Администратор магазина, может добавлять товары и редактировать их описание");
                 break;
-            case Manager:
+            case MANAGER:
                 System.out.println("Менеджер магазина, может общаться с клиентами");
                 break;
-            case Client:
+            case CLIENT:
                 System.out.println("Клиент магазина, может покупать товары и пользоваться дисконтом");
                 break;
-            case Anonym:
+            case ANONYM:
                 System.out.println("Анонимный пользователь, может покупать товары и/или авторизоваться");
                 break;
         }
